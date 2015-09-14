@@ -16,12 +16,16 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return render_template("hello.html")
+    return render_template("index.html")
 
 
 @app.route('/my_var=<var>/')
 def hello_var(var):
     return render_template("hello_var.html", var=var)
+
+@app.errorhandler(404)
+def not_found(e):
+    return render_template("404.html")
 
 if __name__ == '__main__':
     # Parse arguments

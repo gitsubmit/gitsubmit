@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+    <head>
+        {% block head %}
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+        <!-- Favicon -->
+        <!-- <link rel="icon" href="images/favicon/favicon-32x32.png" sizes="32x32" /> -->
+
+        <!-- Android L Chrome Titlebar Color -->
+        <meta name="theme-color" content="#dc7526" />
+
+        <!-- Stylesheets -->
+        <link href="{{ url_for('static', filename='materialize/dist/css/materialize.min.css') }}" type="text/css" rel="stylesheet" media="screen,projection" />
+        <link href="{{ url_for('static', filename='assets/css/app.css') }}" rel="stylesheet" />
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css' />
+        <script src="{{ url_for('static', filename='assets/js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='materialize/dist/js/materialize.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='materialize/js/animation.js') }}"></script>
+        <script src="{{ url_for('static', filename='materialize/js/hammer.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='materialize/js/jquery.hammer.js') }}"></script>
+        <script src="{{ url_for('static', filename='materialize/js/jquery.easing.1.3.js') }}"></script>
+        <script src="{{ url_for('static', filename='materialize/js/animation.js') }}"></script>
+        <script src="{{ url_for('static', filename='materialize/js/sideNav.js') }}"></script>
+
+        <script src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
+        <title>{% block title %}{% endblock %} - GitSubmit</title>
+        {% endblock %}
+    </head>
+    <body>
+        {% block nav %}
+        <header>
+            <nav id="nav">
+                <div class="nav-wrapper container">
+                    <a href="" class="brand-logo">LOGO</a>
+                    <a href="" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Sign Up</a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href=""><i class="small mdi-social-notifications left"></i>Notifications</a></li>
+                        <li><a href=""><i class="small mdi-action-account-circle left"></i>Account</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-menu">
+                        <li><a href="">About</a></li>
+                        <li><a href="">Sign Up</a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href=""><i class="small mdi-social-notifications left"></i>Notifications</a></li>
+                        <li><a href=""><i class="small mdi-action-account-circle left"></i>Account</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        {% endblock %}
+        <main>
+            <div class="container">
+            {% block content %}{% endblock %}
+            </div>
+        </main>
+        {% block footer %}
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row white-text">
+                    <div class="col s12 m8 l7">
+                        © 2015 GitSubmit Team
+                    </div>
+                    <div class="col s12 m4 l5">
+                        LOGO
+                    </div>
+                </div>
+            </div>
+        </footer>
+        {% endblock %}
+    </body>
+</html>
