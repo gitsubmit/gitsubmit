@@ -36,7 +36,7 @@ if __name__ == '__main__':
     # If we got a port_num config from args, override with that
     if args.port_num is not None:
         PORT_NUM = args.port_num
-
+    PORT_NUM = int(PORT_NUM)
     # set up WSGI/tornado magic
     wsgi_container = tornado.wsgi.WSGIContainer(app)
     http_server = tornado.httpserver.HTTPServer(wsgi_container)
