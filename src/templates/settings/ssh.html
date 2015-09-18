@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block title %}Manage SSH Keys{% endblock %}
+{% block content %}
+{% if key %}
+<script>
+    // TODO: fix this string
+    Materialize.toast("[not implemented] Key '{{ key }}' added!", 2000)
+</script>
+{% endif %}
+
+<div class="row">
+    <div class="spacer25"></div>
+    <h3>SSH Key Management</h3>
+    <!-- If there are keys, list them -->
+    <table class="col s12 striped responsive-table">
+    <thead>
+        <tr>
+            <th data-field="id">Name</th>
+            <th data-field="short">Contents</th>
+            <th data-field="last_active">Last active</th>
+            <th data-field="remove">Remove?</th>
+        </tr>
+    </thead>
+    <tr>
+        <td>MBP</td>
+        <td>70:52:b2:1a:8c:d0:4f:96 ...</td>
+        <td>9/8/2015 4:32PM</td>
+        <td><a class="waves-effect waves-light btn red darken-4"><i class="small mdi-action-delete left"></i>Remove</a></td>
+    </tr>
+    <tr>
+        <td>MBP</td>
+        <td>70:52:b2:1a:8c:d0:4f:96 ...</td>
+        <td>9/8/2015 4:32PM</td>
+        <td><a class="waves-effect waves-light btn red darken-4"><i class="small mdi-action-delete left"></i>Remove</a></td>
+    </tr>
+    </table>
+    <!-- Else, make a comment about how the user doesn't have any -->
+    <div class=""><p><i>No SSH keys found! Try adding a new one?</i></p></div>
+    <a class="waves-effect waves-light btn green darken-2" href="{{ url_for('new_ssh') }}"><i class="small mdi-content-add-box left"></i>Add New SSH Key</a>
+</div>
+{% endblock %}
