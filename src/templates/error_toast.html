@@ -1,0 +1,5 @@
+{% if error_toast %}
+<script>
+    Materialize.toast("Error occurred! {{ error_toast }}", 2000, "red darken-1");
+</script>
+{% endif %}

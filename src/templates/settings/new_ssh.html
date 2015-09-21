@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}Manage SSH Keys{% endblock %}
+{% block content %}
+{% include "error_toast.html" %}
+<div class="spacer25"></div>
+<h3>Add New SSH Key</h3>
+<div class="row">
+    <form class="col s12" action="{{ url_for('new_ssh') }}" method="POST">
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="13&quot; Macbook Pro" id="key_name" name="key_name" type="text" class="validate">
+                <label for="key_name">Key Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="pubkey_contents" class="materialize-textarea" name="pubkey_contents" placeholder="ssh-rsa AAAA ..."></textarea>
+                <label for="pubkey_contents">Public Key Contents</label>
+            </div>
+        </div>
+        <button type="submit" class="waves-effect waves-light btn green darken-2"><i class="small mdi-content-add-box left"></i>Add Key</button>
+    </form>
+
+</div>
+{% endblock %}
