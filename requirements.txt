@@ -4,6 +4,7 @@ flask
 pymongo
 requests
 # testing
+paramiko
 selenium
 robotframework
 robotframework-selenium2library
