@@ -14,8 +14,8 @@ cd src
 /virtualenvs/gitsubmit_env/bin/gunicorn --access-logfile /srv/logs/staging_access.log -w 1 -b :5555 app:app &
 
 TESTSERVERPID=$!
-echo $TESTSERVERPID
-sleep 3 # let tornado warm up
+echo $TESTSERVERPID > ../staging_pid
+sleep 3 # let gunicorn warm up
 
 cd ../test
 # Run tests with an X virtual frame buffer

@@ -2,7 +2,9 @@
 gunicorn
 flask
 pymongo
+pyolite
 requests
+sshpubkeys
 # testing
 selenium
 robotframework

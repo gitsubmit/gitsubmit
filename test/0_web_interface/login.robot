@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation     A test suite with a single Gherkin style test.
 Resource          ../resources/resource.robot
-Library           ../libraries/SmokeLib.py
+Library           ../libraries/HTTPClientLib.py
 Test Teardown     Close Browser
 
 *** Test Cases ***
