@@ -1,6 +1,7 @@
 # application
 gunicorn
 flask
+pbkdf2
 pymongo
 requests
 # testing

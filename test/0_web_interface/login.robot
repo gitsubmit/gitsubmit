@@ -29,6 +29,7 @@ Valid Login
     When user "demo" logs in with password "mode"
     Then welcome page should be open
 
+
 *** Keywords ***
 Browser is opened to login page
     Open browser to login page
