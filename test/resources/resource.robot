@@ -44,6 +44,9 @@ Open Browser To URL
 Login Page Should Be Open
     Title Should Be    Login - GitSubmit
 
+Signup Page Should Be Open
+    Title Should Be    Signup - GitSubmit
+
 Landing Page Should Be Open
     Title Should Be    Welcome - GitSubmit
 
