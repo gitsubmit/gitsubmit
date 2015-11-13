@@ -161,3 +161,12 @@ class APIClientLib(object):
         keys_obj = self.list_keys_for_user(url_root, user)
         for key in keys_obj["data"]["keys"][1:]:
             self.remove_key_from_user(url_root, user, key)
+
+    def get_project_file_or_dir_from_api(self, url_root, class_name, project_name, commit_or_branch, filepath):
+        result = requests.get(url_root + "/classes/" + class_name + "/projects/" + project_name + "/source/" + commit_or_branch + "/" + filepath)
+
+        return_obj = {"status_code": result.status_code,
+                      "data": result.text,
+                      "headers": result.headers}
+        print return_obj
+        return return_obj

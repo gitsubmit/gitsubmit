@@ -1,6 +1,7 @@
 # application
-gunicorn
 flask
+gunicorn
+gitpython
 pyjwt
 pbkdf2
 pymongo

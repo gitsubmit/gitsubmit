@@ -5,5 +5,6 @@ Various project configurations
 """
 
 GITOLITE_ADMIN_PATH = "/srv/gitolite_management/gitolite-admin/"
-DATABASE_PORT = 27017
 TIME_FORMAT = "%Y-%m-%d"
+STATIC_REPOS_ROOT = "/home/git/repositories/"
+DATABASE_PORT = 27017
